@@ -2,10 +2,10 @@ name: Workflow for testing
 on: push
 
 env:
-  DB_HOST: mariadb,
-  DB_PORT: 3306,
-  DB_USER: root,
-  DB_PASSWORD: root,
+  DB_HOST: mariadb
+  DB_PORT: 3306
+  DB_USER: root
+  DB_PASSWORD: root
   DB_NAME: database_test
 
 
@@ -30,9 +30,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Wait 10 seconds for mariadb heatlh
-        run: sleep 10s
 
       - name: Run tests
         run: npm run test
