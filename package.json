@@ -1,0 +1,19 @@
+{
+  "name": "github-actions-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ii02735/github-actions-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ii02735/github-actions-tests/issues"
+  },
+  "homepage": "https://github.com/ii02735/github-actions-tests#readme"
+}
