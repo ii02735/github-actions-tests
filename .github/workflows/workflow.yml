@@ -1,18 +1,19 @@
 name: Workflow for testing
 on: push
 
+env:
+  DB_HOST: mariadb,
+  DB_PORT: 3306,
+  DB_USER: root,
+  DB_PASSWORD: root,
+  DB_NAME: database_test
+
+
 jobs:
 
   container-job:
     runs-on: ubuntu-latest
     container: node:12
-
-    env:
-      DB_HOST: mariadb,
-      DB_PORT: 3306,
-      DB_USER: root,
-      DB_PASSWORD: root,
-      DB_NAME: database_test
 
     services:
       mariadb:
