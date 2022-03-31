@@ -15,9 +15,17 @@ const knex = require("knex")({
     },
 });
 
-const fs = require('fs')
+const path = require('path')
+
+const fs = require('fs');
 
 test("Adding table into test db", async () => {
-    const sql = fs.readFileSync('./resources/test.sql').toString()
-    await knex.raw(sql);
+    const sql = fs.readFileSync(path.join(__dirname,'resources','table.sql')).toString()
+    try{
+        await knex.raw(sql);
+    }catch(e){
+        throw new Error(e)
+    }finally{
+        await knex.destroy()
+    }
 })
